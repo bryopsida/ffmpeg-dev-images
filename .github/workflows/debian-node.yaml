@@ -1,0 +1,28 @@
+name: Publish ffmpeg-node debian image
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: '22 4 * * *'
+  push:
+    branches: [ main ]
+    tags: [ 'v*.*.*' ]
+    paths:
+      - 'debian-node/Dockerfile'
+      - '.github/workflows/debian-node.yml'
+  pull_request:
+    branches: [ main ]
+    paths:
+      - 'debian-node/Dockerfile'
+      - '.github/workflows/debian-node.yml'
+jobs:
+  build:
+    permissions:
+      contents: read
+      packages: write
+      security-events: write
+      id-token: write
+    name: 'OCI'
+    uses: curium-rocks/flows/.github/workflows/oci-build-image.yml@main
+    with:
+      registry: ghcr.io/bryopsida
+      image_name: ffmpeg-node-debian
