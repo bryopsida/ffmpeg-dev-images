@@ -26,3 +26,5 @@ jobs:
     with:
       registry: ghcr.io/bryopsida
       image_name: ffmpeg-dev-pod
+      codeql_enabled: false
+      context: dev-pod/

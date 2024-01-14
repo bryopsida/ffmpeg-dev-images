@@ -26,3 +26,5 @@ jobs:
     with:
       registry: ghcr.io/bryopsida
       image_name: ffmpeg-node-debian
+      codeql_enabled: false
+      context: debian-node/

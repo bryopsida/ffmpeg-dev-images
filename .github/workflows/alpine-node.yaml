@@ -26,3 +26,5 @@ jobs:
     with:
       registry: ghcr.io/bryopsida
       image_name: ffmpeg-node-alpine
+      codeql_enabled: false
+      context: alpine-node/
