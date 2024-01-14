@@ -8,12 +8,12 @@ on:
     tags: [ 'v*.*.*' ]
     paths:
       - 'debian-node/Dockerfile'
-      - '.github/workflows/debian-node.yml'
+      - '.github/workflows/debian-node.yaml'
   pull_request:
     branches: [ main ]
     paths:
       - 'debian-node/Dockerfile'
-      - '.github/workflows/debian-node.yml'
+      - '.github/workflows/debian-node.yaml'
 jobs:
   build:
     permissions:

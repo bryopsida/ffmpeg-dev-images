@@ -8,12 +8,12 @@ on:
     tags: [ 'v*.*.*' ]
     paths:
       - 'alpine-node/Dockerfile'
-      - '.github/workflows/alpine-node.yml'
+      - '.github/workflows/alpine-node.yaml'
   pull_request:
     branches: [ main ]
     paths:
       - 'alpine-node/Dockerfile'
-      - '.github/workflows/alpine-node.yml'
+      - '.github/workflows/alpine-node.yaml'
 jobs:
   build:
     permissions:
